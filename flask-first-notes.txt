@@ -1,1 +1,7 @@
-# init
+mkvirtualenv flask-first
+
+pip install flask
+
+app.register_blueprint(home_blueprint, url_prefix = '/blue')
+http://flask.pocoo.org/docs/0.10/blueprints/
+
