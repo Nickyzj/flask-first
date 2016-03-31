@@ -326,3 +326,14 @@ In case of the decorator the argument is optional if you want to use the functio
 
 {% for x in mylist | reverse %}
 {% endfor %}
+
+-----------------------------------------------
+
+python manage.py db init
+
+python manage.py db migrate
+
+python manage.py db upgrade
+
+-------------------------------------------------
+
