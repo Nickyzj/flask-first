@@ -4,13 +4,19 @@ from project.models import BlogPost, User
 # db.drop_all()
 # db.create_all()
 
-# db.session.add(BlogPost("Good", "I am good."))
-# db.session.add(BlogPost("Well", "I\'m well."))
-# db.session.add(BlogPost("Excellent", "I\'m excellent."))
-# db.session.add(BlogPost("Okay", "I\'m okay."))
-# db.session.add(BlogPost("postgres", "we setup a local postgres instance"))
 
-posts = db.session.query(BlogPost).all()
-print posts
+db.session.add(BlogPost("dsfdsf", "ggrevfderfrfre", "4"))
+db.session.add(BlogPost("dbtbgbsfdsf", "ggrevfderfrfre", "4"))
+db.session.add(BlogPost("bgbfgb", "ggrevfderfrfre", "5"))
+db.session.add(BlogPost("dsf43543dsf", "ggrevfderfrfre", "5"))
+db.session.add(BlogPost("bgdbgdb", "ggrevfderfrfre", "6"))
+db.session.add(BlogPost("dsfdgtrgtgsf", "ggrevfderfrfre", "6"))
+db.session.add(BlogPost("dsfr4334fdsf", "ggrevfderfrfre", "7"))
+db.session.add(BlogPost("tgtrgr", "ggrevfderfrfre", "8"))
 
-# db.session.commit()
+
+
+# posts = db.session.query(BlogPost).all()
+# print posts
+
+db.session.commit()

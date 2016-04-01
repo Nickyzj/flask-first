@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Welcome to Flask!</h1>
+
+<!-- All posts -->
+<h3>Posts:</h3>
+{% for post, user in post_users %}
+  <strong>Title:</strong> {{ post.title }} <br>
+  <strong>Post:</strong> {{ post.description }} <br>
+  <strong>Author:</strong> {{ user.name }} <br>
+<br>
+{% endfor %}
+
+
+{% endblock %}

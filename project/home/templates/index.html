@@ -3,7 +3,9 @@
 {% block content %}
 
 <h1>Welcome to Flask!</h1>
-
+<br>
+<p>Click <a href="/user/logout">here</a> to logout.</p>
+<br>
 <!-- post form -->
 <h3>Add a Post!</h3>
 <br>
@@ -33,7 +35,7 @@
 </form>
 
 <!-- All posts -->
-<h3>Posts:</h3>
+<a href="/post/"><h3>Posts:</h3></a>
 {% for post in posts %}
   <strong>Title:</strong> {{ post.title }} <br>
   <strong>Post:</strong> {{ post.description }} <br>

@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 app.debug = True
 app.secret_key = 'my precious'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///D:\\codes\\python\\flask\sandbox\\flask-first\\posts.db'
-
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///D:\\codes\\python\\flask\sandbox\\flask-first\\posts.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:123123@localhost/flask-first"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 bcrypt = Bcrypt(app)
@@ -18,9 +18,11 @@ db = SQLAlchemy(app)
 
 from project.home.views import home_blueprint
 from project.user.views import user_blueprint
+from project.post.views import post_blueprint
 
 app.register_blueprint(home_blueprint)
 app.register_blueprint(user_blueprint, url_prefix = '/user')
+app.register_blueprint(post_blueprint, url_prefix = '/post')
 
 from models import User
 
